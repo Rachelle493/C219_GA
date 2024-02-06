@@ -1,0 +1,126 @@
+
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+h2 {
+    padding: 30px;
+    text-align: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #F2B9B3;
+}
+
+header img {
+    width: 100px;
+}
+
+nav {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+#search {
+    text-align: center;
+    padding: 1rem;
+}
+
+#search h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+#search-bar {
+    width: 50%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#books {
+    padding: 1rem;
+}
+
+#books h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.book-grid {
+    display: grid;
+    grid-gap: 1rem;
+}
+
+.book-card {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.book-card img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 0.5rem;
+}
+
+.book-card h3 {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+.book-card p {
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.book-card button {
+    background-color: #333;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+}
+
+#banner {
+    background-color: beige;
+    align-items: center;
+    padding-inline: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    box-shadow: 50px rgba(0, 0, 0, 0.2);
+}
+footer{
+    background-color: #F2B9B3;
+}
+
+
+/* responsive web css */
+@media only screen and (max-width:768px) {
+    h1{
+        text-align: center;
+    }
+    p{
+        text-align: center;
+    }
+    button{
+        position:absolute;
+        left: 33.33%;
+    }
+    img{
+        padding-top: 30px;
+    }
+}

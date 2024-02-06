@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/fullpage.js/dist/fullpage.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <title>School Library Web App</title>
+    <link rel="stylesheet" href="stylesheet/style.css">
+</head>
+
+<body>
+    <header>
+        <img src="images/logo.png" alt="School Library Logo" style="width: 60px; height: 60px;">
+        <nav>
+            <a href="#books">Books</a>
+            <a href="#stats">Stats</a>
+            <a href="#inventory">Inventory</a>
+        </nav>
+    </header>
+
+    <div id="fullpage">
+
+        <div class="section" id="books">
+            <h2>Find your next adventure</h2>
+            <input type="text" id="search-bar" placeholder="Search by title, author, or keyword">
+            <button class="button px-0" type="submit" style="width: 10%;">
+                <span class="button-content">Search</span>
+            </button>
+            <div class="book-grid">
+                <div id="carouselCourses" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner pb-2 text-dark-grey">
+                        <!-- <div class="carousel-item active"> -->
+                        <div class="row" style="padding-bottom: 20px;">
+                            <div class="col-md-3 col-sm-6">
+                                <div class="card shadow-sm card1">
+                                    <a href="#"><img src="images/1.jpg" class="card-img-top"
+                                            style="width: 280px; height: 250px;"></a>
+                                    <div class="card-body">
+                                        <h5 class="card-title mb-4 fs-6 fw-bold"><a href="#">The Ousider</a></h5>
+                                        <i class="fas fa-user-circle me-2"></i>Stephen King
+                                    </div>
+                                    <div class="card-footer small bg-white fs-small">
+                                        <button type="button" class="btn btn-outline-dark btn1">Reserve</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="card shadow-sm card2">
+                                    <a href="#"><img src="images\2.jpg" class="card-img-top"
+                                            style="width: 280px; height: 250px;"></a>
+                                    <div class="card-body">
+                                        <h5 class="card-title mb-4 fs-6 fw-bold"><a href="#">The Way Back</a></h5>
+                                        <i class="fas fa-user-circle me-2"></i>Gavriel Savit
+                                    </div>
+                                    <div class="card-footer small bg-white fs-small">
+                                        <button type="button" class="btn btn-outline-dark btn1">Reserve</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="card shadow-sm card3">
+                                    <a href="#"><img src="images\3.jpg" class="card-img-top"
+                                            style="width: 280px; height: 250px;"></a>
+                                    <div class="card-body">
+                                        <h5 class="card-title mb-4 fs-6 fw-bold"><a href="#">Tag You're Dead</a></h5>
+                                        <i class="fas fa-user-circle me-2"></i>Kathryn Foxfield
+                                    </div>
+                                    <div class="card-footer small bg-white fs-small">
+                                        <button type="button" class="btn btn-outline-dark btn1">Reserve</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="card shadow-sm card4">
+                                    <a href="#"><img src="images\4.webp" class="card-img-top"
+                                            style="width: 280px; height: 250px;"></a>
+                                    <div class="card-body">
+                                        <h5 class="card-title mb-4 fs-6 fw-bold"><a href="#">The Queen of Hearts</a>
+                                        </h5>
+                                        <i class="fas fa-user-circle me-2"></i>Kimmery Martin
+                                    </div>
+                                    <div class="card-footer small bg-white fs-small">
+                                        <button type="button" class="btn btn-outline-dark btn1">Reserve</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="row" style="padding-bottom: 20px;">
+                            <div class="col-md-3 col-sm-6">
+                                <div class="card shadow-sm card5">
+                                    <a href="#"><img src="images\5.jpg" class="card-img-top"
+                                            style="width: 280px; height: 300px;"></a>
+                                    <div class="card-body">
+                                        <h5 class="card-title mb-4 fs-6 fw-bold"><a href="#">Look at Me</a></h5>
+                                        <i class="fas fa-user-circle me-2"></i>Sarah Duguid
+                                    </div>
+                                    <div class="card-footer small bg-white fs-small">
+                                        <button type="button" class="btn btn-outline-dark btn1">Reserve</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="card shadow-sm card6">
+                                    <a href="#"><img src="images\6.jpg" class="card-img-top"
+                                            style="width: 280px; height: 300px;"></a>
+                                    <div class="card-body">
+                                        <h5 class="card-title mb-4 fs-6 fw-bold"><a href="#">Heartstopper</a></h5>
+                                        <i class="fas fa-user-circle me-2"></i>Alice Oseman
+                                    </div>
+                                    <div class="card-footer small bg-white fs-small">
+                                        <button type="button" class="btn btn-outline-dark btn1">Reserve</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="card shadow-sm card7">
+                                    <a href="#"><img src="images\7.jpg" class="card-img-top"
+                                            style="width: 280px; height: 300px;"></a>
+                                    <div class="card-body">
+                                        <h5 class="card-title mb-4 fs-6 fw-bold"><a href="#">Red, White & Royal Blue</a>
+                                        </h5>
+                                        <i class="fas fa-user-circle me-2"></i>Casey McQuinston
+                                    </div>
+                                    <div class="card-footer small bg-white fs-small">
+                                        <button type="button" class="btn btn-outline-dark btn1">Reserve</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="card shadow-sm card8">
+                                    <a href="#"><img src="images\8.jpg" class="card-img-top"
+                                            style="width: 280px; height: 300px;"></a>
+                                    <div class="card-body">
+                                        <h5 class="card-title mb-4 fs-6 fw-bold"><a href="#">Icebreaker</a></h5>
+                                        <i class="fas fa-user-circle me-2"></i>Hannah Grace
+                                    </div>
+                                    <div class="card-footer small bg-white fs-small">
+                                        <div class="card-footer small bg-white fs-small">
+                                            <button type="button" class="btn btn-outline-dark btn1">Reserve</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="section" id="stats">
+                <div class="container-fluid">
+                    <div class="row" id="banner">
+                        <div class="col-sm-9">
+                            <h1>Welcome to woodlands school library</h1>
+                            <p>Discover a new world of knowledge and adventure. We have a few books under categories<br>
+                                for your reading pleasure.</p>
+                        </div>
+                        <div class="col-sm-3">
+                            <img src="https://images.pexels.com/photos/163036/mario-luigi-yoschi-figures-163036.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+                <h2>Explore reading trends</h2>
+                <canvas id="myChart" style="width: 450px; height: 100px; padding-bottom:10px"></canvas>
+            </div>
+
+            <div class="section" id="inventory">
+                <h2>Manage our collection</h2>
+                <table id="example" class="display"></table>
+            </div>
+
+            <footer>
+            <p>Contact: library@school.edu</p>
+            <ul>
+                <li><a href="https://www.facebook.com/schoollibrary">Facebook</a></li>
+                <li><a href="https://www.instagram.com/schoollibrary">Instagram</a></li>
+            </ul>
+        </footer>
+        </div>
+
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+        <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"></script>
+        <script src="https://unpkg.com/fullpage.js/dist/fullpage.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="https://unpkg.com/@popperjs/core@2"></script>
+        <script src="https://unpkg.com/tippy.js@6"></script>
+        <script src="script.js"></script>
+
+        <script>
+            $(document).ready(function () {
+                $('#fullpage').fullpage({ //initialize
+                    //set options
+                    sectionsColor: ['#DAA67E', '#F2EFE4', '#DAA67E'],
+                    navigation: true,
+                    navigationPosition: 'right',
+                    anchors: ['section1', 'section2', 'section3'] //name the anchors for each section
+                });
+            });
+        </script>
+
+        <script>
+            // Define chart labels
+            const labels = [
+                'Fantasy',
+                'Science Fiction',
+                'Mystery',
+                'Thriller',
+                'Romance',
+                'Non-Fiction',
+                'Bio and Memoirs'
+            ];
+
+            // Set labels, colours and data
+            const data = {
+                labels: labels,
+                datasets: [{
+                    label: 'Number of books',
+                    backgroundColor: ['#90101F', '#F2B9B3', '#F29494'],
+                    borderColor: 'rgb(255, 99, 132)',
+                    data: [12, 19, 3, 5, 2, 3, 15],
+                }]
+            };
+
+            // Configure chart
+            const config = {
+                type: 'bar',
+                data: data,
+            };
+
+            // Render chart in <canvas>
+            const myChart = new Chart(
+                document.getElementById('myChart'),
+                config
+            );
+        </script>
+
+        <script>
+            var dataVar = [
+                ["1984", "George Orwell", "Dystopian Fiction", "1949", "Hardcover"],
+                ["1984", "George Orwell", "Dystopian Fiction", "1949", "Paperback"],
+                ["Animal Farm", "Geroge Orwell", "Political Satire", "1945", "Hardcover"],
+                ["Atomic Habits", "James Clear", "Self-improvement", "2018", "Audio"],
+                ["Becoming", "Michelle Obama", "Autobiography", "2018", "eBook"],
+                ["Beloved", "Toni Morrison", "Literary Fiction", "1987", "Paperback"],
+                ["Brave New World", "Aldous Huxley", "Dystopian", "1932", "Hardcover"],
+                ["Fahrenheit 451", "Ray Bradbury", "Dystopian Fiction", "1953", "Audio"],
+                ["Hard Truths to Keep Singapore Going", "Lee Kuan Yew", "Autobiography", "2011", "Hardcover"],
+                ["Harry Potter and the Sorcerer's Stone", "J.K. Rowling", "Adventure Fiction", "1997", "Hardcover"],
+                ["Life of Pi", "Yann Martel", "Adventure Fiction", "2001", "Paperback"],
+                ["The Lord of the Rings", "J.R.R. Tolkien", "Fantasy", "1954-1955", "Hardcover"],
+                ["Dune", "Frank Herbert", "Science fiction", "1965", "Paperback"],
+                ["Frankenstein", "Mary Shelley", "Gothic Horror", "1818", "Audio"],
+                ["Ulysses", "James Joyce", "Modernist fiction", "1922", "Paperback"],
+                ["One Hundred Years of Solitude", "Gabriel García Márquez", "Magical realism", "1967", "Hardcover"],
+                ["The Hitchhiker's Guide to the Galaxy", "Douglas Adams", "Science fiction", "1979", "Paperback"],
+            ];
+
+            $(document).ready(function () {
+                $('#example').DataTable({
+                    data: dataVar,
+                    columns: [
+                        { title: "Title" },
+                        { title: "Author" },
+                        { title: "Genre" },
+                        { title: "Year" },
+                        { title: "Type" }
+                    ],
+                    "pageLength": 5 // Set the number of rows per page
+                });
+            });
+        </script>
+
+        <script>
+            /* Button Reserved */
+            $(document).ready(function () {
+                $(".btn1").click(function () {
+                    // Change the button text to "Reserved"
+                    $(this).text("Reserved");
+                    // Disable the button
+                    $(this).prop('disabled', true);
+                });
+            });
+
+            /* Search */
+            const searchInput = document.getElementById("searchInput");
+            const myList = document.getElementById("books");
+
+            searchInput.addEventListener("keyup", function () {
+                const searchTerm = this.value.toLowerCase();
+
+                myList.querySelectorAll("h5").forEach(function (item) {
+                    const itemText = item.textContent.toLowerCase();
+                    const isMatch = itemText.includes(searchTerm);
+
+                    item.style.display = isMatch ? "" : "none";
+                });
+            });
+        </script>
+</body>
+
+</html>
